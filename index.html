@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This file is served as-is. No Jekyll processing. -->
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
@@ -6,6 +7,7 @@
   <meta name="theme-color" content="#0a0a0a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="generator" content="none" />
   <title>AURA Gold ZATCA Pro</title>
   <style>
     :root{
@@ -150,10 +152,11 @@
     html[dir="rtl"] .nav{direction:rtl}
     #printArea{display:none;position:static}
     @media print{
-      html,body{background:#fff !important;margin:0 !important;padding:0 !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
-      *{visibility:hidden !important}
-      #printArea,#printArea *{visibility:visible !important}
-      #printArea{display:block !important;position:fixed !important;left:0 !important;top:0 !important;width:100% !important}
+      html,body{background:#fff !important;margin:0 !important;padding:0 !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;width:100% !important;height:auto !important}
+      html *{display:none !important}
+      #printArea{display:block !important;position:absolute !important;left:0 !important;top:0 !important;width:100% !important;margin:0 !important;padding:0 !important;border:none !important;box-shadow:none !important}
+      #printArea *{display:revert !important}
+      .istrip{display:block !important;height:5px !important;background:linear-gradient(90deg,#7a5c1e,#c9a84c 30%,#f5e6c0 50%,#c9a84c 70%,#7a5c1e) !important;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
     }
     @media (max-width:420px){
       .g2{grid-template-columns:1fr}
@@ -778,7 +781,7 @@
     // LICENSE CONFIG — CHANGE THESE TWO VALUES PER CLIENT
     // ══════════════════════════════════════════════════
     const LIC_PASSWORD = "gold2024";       // ← Set client password here
-    const LIC_EXPIRY   = "2027-05-31";     // ← Set expiry date here (YYYY-MM-DD)
+    const LIC_EXPIRY   = "2026-12-31";     // ← Set expiry date here (YYYY-MM-DD)
     // ══════════════════════════════════════════════════
 
     // Simple hash: not cryptographic but not reversible by average user
